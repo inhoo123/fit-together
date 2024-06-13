@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Fit-Together</title>
 </head>
 <body>
- <b>&{today } </b>
+ <b>안녕 </b>
 </body>
 </html>

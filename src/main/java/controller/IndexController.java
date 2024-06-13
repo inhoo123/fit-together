@@ -14,12 +14,6 @@ public class IndexController extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 처리가 일어났다고 치고
-		System.out.println("/index called");
-		
-		LocalDate today = LocalDate.now();
-		request.setAttribute("today", today);
-		request.setAttribute("visit", "환영합니다");
 		
 		
 		
