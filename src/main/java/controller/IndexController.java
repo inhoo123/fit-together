@@ -13,10 +13,10 @@ import jakarta.servlet.http.HttpServletResponse;
 public class IndexController extends HttpServlet {
 
 	@Override
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
 
 		if (request.getSession().getAttribute("authUser") == null) {
+			
 			request.getRequestDispatcher("WEB-INF/view/index.jsp").forward(request, response);
 		} else {
 			request.getRequestDispatcher("WEB-INF/view/index-logon.jsp").forward(request, response);
