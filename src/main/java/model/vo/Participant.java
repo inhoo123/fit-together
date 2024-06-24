@@ -2,11 +2,23 @@ package model.vo;
 
 import java.sql.Date;
 
-public class Paticipant {
+public class Participant {
 	int id;
 	String userId;
-	String eventId;
+	int eventId;
 	Date joinAt;
+
+	public Participant() {
+		super();
+	}
+
+	public Participant(int id, String userId, int eventId, Date joinAt) {
+		super();
+		this.id = id;
+		this.userId = userId;
+		this.eventId = eventId;
+		this.joinAt = joinAt;
+	}
 
 	public int getId() {
 		return id;
@@ -24,11 +36,11 @@ public class Paticipant {
 		this.userId = userId;
 	}
 
-	public String getEventId() {
+	public int getEventId() {
 		return eventId;
 	}
 
-	public void setEventId(String eventId) {
+	public void setEventId(int eventId) {
 		this.eventId = eventId;
 	}
 
@@ -38,17 +50,6 @@ public class Paticipant {
 
 	public void setJoinAt(Date joinAt) {
 		this.joinAt = joinAt;
-	}
-
-	public Paticipant(int id, String userId, String eventId, Date joinAt) {
-		this.id = id;
-		this.userId = userId;
-		this.eventId = eventId;
-		this.joinAt = joinAt;
-	}
-
-	public Paticipant() {
-		super();
 	}
 
 }

@@ -21,10 +21,20 @@
 <%@ include file="/WEB-INF/view/common/navbar.jsp"%>
 	<div class="container px-1">
 		<div>
-			<h1 class="text-center">핏투게더</h1>
+			로그온 메뉴바 들어갈 자리
 		</div>
-		<a href="${pageContext.servletContext.contextPath }/events/design">일정 만들기 </a>
-		<a href="${pageContext.servletContext.contextPath }/events/*">목록 보기 </a>
+		<h2>새 행사 등록</h2>
+		<p>
+			등록할 행사에 필요한 체육시설 종류를 선택하세요.
+		</p>
+		<form action="${pageContext.servletContext.contextPath }/events/new">
+			<select name="type">
+				<c:forEach var="one" items="${types}">
+				<option>${one }</option>
+				</c:forEach>
+			</select>
+			<button>선택</button>
+		</form>	
 	</div>
 </body>
 </html>

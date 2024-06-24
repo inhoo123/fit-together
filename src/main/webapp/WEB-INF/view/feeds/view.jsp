@@ -11,7 +11,7 @@
 		<title>핏투게더</title>
 	</c:when>
 	<c:otherwise>
-		<title>${title }::핏투게더</title>
+		<title>${feed.title }::핏투게더</title>
 	</c:otherwise>
 </c:choose>
 <link rel="stylesheet"
@@ -19,12 +19,16 @@
 </head>
 <body>
 <%@ include file="/WEB-INF/view/common/navbar.jsp"%>
-	<div class="container px-1">
-		<div>
-			<h1 class="text-center">핏투게더</h1>
+	<div>
+		<p style="text-align: center;">작성일: ${feed.writedAt } 분류: ${feed.category }</p>
+		<div class="container px-1">
+			<b>내용</b>
+			<td style="border: 1px solid #ccc; padding: 12px;" colspan="2"><p
+					style="height: 200px; resize: none; width: 100%; box-sizing: border-box; padding: 6px 10px; border: 1px solid #ccc">
+					${feed.body }</p></td>
+
 		</div>
-		<a href="${pageContext.servletContext.contextPath }/events/design">일정 만들기 </a>
-		<a href="${pageContext.servletContext.contextPath }/events/*">목록 보기 </a>
 	</div>
+
 </body>
 </html>

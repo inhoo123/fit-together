@@ -18,13 +18,34 @@
 	href="${pageContext.servletContext.contextPath }/css/style.css?<%=System.currentTimeMillis() %>" />
 </head>
 <body>
-<%@ include file="/WEB-INF/view/common/navbar.jsp"%>
+	<%@ include file="/WEB-INF/view/common/navbar.jsp"%>
 	<div class="container px-1">
 		<div>
-			<h1 class="text-center">핏투게더</h1>
+			<h2 class="text-center">글 목록</h2>
 		</div>
-		<a href="${pageContext.servletContext.contextPath }/events/design">일정 만들기 </a>
-		<a href="${pageContext.servletContext.contextPath }/events/*">목록 보기 </a>
+		<table style="width: 800px; margin: auto; border-collapse: collapse;">
+			<c:forEach items="${feeds }" var="one">
+				<tr style="border-bottom: 1px solid #ddd; height: 30px;">
+					<td><a href="${pageContext.servletContext.contextPath }/feeds/view/${one.no}">제목:[${one.title }] </br> 분류:${one.category }</a></td>
+				</tr>
+			</c:forEach>
+		</table>
+
+
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

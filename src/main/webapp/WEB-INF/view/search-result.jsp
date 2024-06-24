@@ -18,13 +18,17 @@
 	href="${pageContext.servletContext.contextPath }/css/style.css?<%=System.currentTimeMillis() %>" />
 </head>
 <body>
-<%@ include file="/WEB-INF/view/common/navbar.jsp"%>
+	<%@ include file="/WEB-INF/view/common/navbar.jsp"%>
 	<div class="container px-1">
-		<div>
-			<h1 class="text-center">핏투게더</h1>
-		</div>
-		<a href="${pageContext.servletContext.contextPath }/events/design">일정 만들기 </a>
-		<a href="${pageContext.servletContext.contextPath }/events/*">목록 보기 </a>
+		<h1 class="my-2">"${param.q }" 검색결과 </h1>
+		
+		<ul>
+			<c:forEach items="${foundEvents }" var="one">
+				<li>${one.title }  - ${one.description }</li>
+			</c:forEach>
+		
+		</ul>
+		
 	</div>
 </body>
 </html>

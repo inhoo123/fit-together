@@ -12,6 +12,8 @@ import oracle.jdbc.datasource.impl.OracleDataSource;
 
 public class UserDao {
 
+	
+	
 	public boolean save(User newUser) throws Exception {
 		OracleDataSource ods = new OracleDataSource();
 		ods.setURL("jdbc:oracle:thin:@//3.36.66.249:1521/xe");
@@ -64,4 +66,32 @@ public class UserDao {
 			return null;
 		}
 	}
+//=======================================================================================================	
+//	public User findById(String id) throws Exception {
+//		OracleDataSource ods = new OracleDataSource();
+//		ods.setURL("jdbc:oracle:thin:@//3.36.66.249:1521/xe");
+//		ods.setUser("fit_together");
+//		ods.setPassword("oracle");
+//		try (Connection conn = ods.getConnection()) {
+//
+//			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM USERS WHERE ID=?");
+//			stmt.setString(1, id);
+//
+//			ResultSet rs = stmt.executeQuery();
+//
+//			if (rs.next()) {
+//				User user = new User(rs.getString("ID"), rs.getString("PASSWORD"), rs.getString("NAME"),
+//						rs.getString("GENDER"), rs.getInt("BIRTH"), rs.getString("EMAIL"), rs.getString("INTEREST"));
+//
+//				return user;
+//			} else {
+//				return null;
+//			}
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return null;
+//		}
+//	}	
+	
 }

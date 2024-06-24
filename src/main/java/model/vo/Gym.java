@@ -1,25 +1,41 @@
 package model.vo;
 
 public class Gym {
-	public Gym(int gymId, String type, String location, String name, String owner, String management) {
-		this.gymId = gymId;
-		this.type = type;
-		this.location = location;
-		this.name = name;
-		this.owner = owner;
-		this.management = management;
-	}
+	int id;
+	String name;
+	String type;
+	String location;
+	String owner;
+	String manager;
 
 	public Gym() {
 		super();
 	}
 
-	public int getGymId() {
-		return gymId;
+	public Gym(int id, String name, String type, String location, String owner, String manager) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.type = type;
+		this.location = location;
+		this.owner = owner;
+		this.manager = manager;
 	}
 
-	public void setGymId(int gymId) {
-		this.gymId = gymId;
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getType() {
@@ -38,14 +54,6 @@ public class Gym {
 		this.location = location;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
 	public String getOwner() {
 		return owner;
 	}
@@ -54,18 +62,12 @@ public class Gym {
 		this.owner = owner;
 	}
 
-	public String getManagement() {
-		return management;
+	public String getManager() {
+		return manager;
 	}
 
-	public void setManagement(String management) {
-		this.management = management;
+	public void setManager(String manager) {
+		this.manager = manager;
 	}
 
-	int gymId;
-	String type;
-	String location;
-	String name;
-	String owner;
-	String management;
 }
